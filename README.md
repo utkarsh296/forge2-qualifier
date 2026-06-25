@@ -1,72 +1,31 @@
-\# Forge 2 Qualifier — Kanban Board
-
-
+# Forge 2 Qualifier — Kanban Board
 
 A Trello-style Kanban board built with Laravel API + React (Vite).
 
+## Live URL
+Coming soon (Vercel deployment)
 
+## Models Used
+- OpenClaw (hands): google/gemini-2.5-flash
+- Hermes (brain): google/gemini-2.5-flash
 
-\## Live URL
+## Run Locally
 
-(Vercel URL — coming soon)
-
-
-
-\## Models Used
-
-\- OpenClaw: google/gemini-2.5-flash
-
-\- Hermes: google/gemini-2.5-flash
-
-
-
-\## Run Locally
-
-
-
-\### Backend
-
-```bash
-
+### Backend
 cd backend
-
 composer install
-
 cp .env.example .env
-
 php artisan key:generate
-
-touch database/database.sqlite
-
 php artisan migrate
-
 php artisan serve
 
-```
-
-
-
-\### Frontend
-
-```bash
-
+### Frontend
 cd frontend
-
 npm install
-
 npm run dev
 
-```
-
-
-
-\## Agent Loop
-
-\- Human posts goal in #sprint-main
-
-\- Hermes (brain) plans and assigns tasks
-
-\- OpenClaw (hands) writes and runs code
-
-\- Results reported back in Slack
-
+## Agent Loop
+- Human posts goal in #sprint-main
+- Hermes (brain) plans and assigns tasks
+- OpenClaw (hands) writes and runs code
+- Results reported back in Slack channels
